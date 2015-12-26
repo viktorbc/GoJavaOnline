@@ -6,7 +6,7 @@ package dz4;
         private double f;
         public static void main(String[] args) {
 
-            public static double getC () {
+            public static double getC()  {
                 return c;
             }
 
@@ -28,8 +28,8 @@ package dz4;
         double farhengeit = 8 * c / 10 + 32;
 
 
-        System.out.println(celsium + " grad Celsium");
-        System.out.println(farhengeit + " grad Farhengeit");
+        System.out.println(farhengeit + " grad Farhengeit have equivalent " +  celsium + " grad Celsium");
+        System.out.println(celsium + " grad Farhengeit have equivalent " + farhengeit + " grad Farhengeit");
     }
 
 
