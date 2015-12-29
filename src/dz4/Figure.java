@@ -1,52 +1,57 @@
 package dz4;
-
-    /**
-     * Created by Виктор on 22.12.2015.
-     */
+import java.lang.Math;
     public abstract class Figure {
-        final double PI = 3.14;
-        abstract String getName();
+            double a, b, c, d;
+            double r;
 
-        double getSquare() {
-            return 0;
-        }
-        public static void main(String[] args){
-            Figure figure = new Figure() {
-                @Override
-                String getName() {
-                    return null;
-                }
-            };
-            Figure circle = new Circle() {
-                @Override
-                protected double pow(double radius, int i) {
-                    return 0;
-                }
+            double area() {
+                return (0);
+            }
+
+            static class Triangle extends Figure {
 
                 @Override
-                String getName() {
-                    return null;
+                double area() {
+                    double p = (a + b + c) / 2;
+                    double psqrt = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+                    double h = (2 / a) * psqrt;
+                    return 0.5 * b * h;
                 }
-            };
-            circle.getSquare();
 
-            Figure triangle = new Triangle() {
-                @Override
-                String getName() {
-                    return null;
+                Triangle(int x, int y, int z) {
+                    a = x;
+                    b = y;
+                    c = z;
                 }
-            };
-            triangle.getSquare();
-            Figure rectangle = new Rectangle() {
+
+            }
+
+            static class Rectangle extends Figure {
+
                 @Override
-                String getName() {
-                    return null;
+                double area() {
+                    return a * b;
                 }
-            };
-            rectangle.getSquare();
-            {
-                System.out.println(figure.getName()  + " .Square -  " + figure.getSquare());
+
+                Rectangle(int x, int y, int z, int j) {
+                    a = x;
+                    b = y;
+                    c = z;
+                    d = j;
+                }
+
+            }
+
+            static class Circle extends Figure {
+
+                @Override
+                double area() {
+                    return 3.14 * r * r;
+                }
+
+                Circle(int x) {
+                    r = x;
+                }
+
             }
         }
-    }
-
