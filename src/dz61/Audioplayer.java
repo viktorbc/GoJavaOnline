@@ -18,7 +18,7 @@ public class Audioplayer {
         final String numberTrack = scanner.next();
         try {
             final int track = Integer.parseInt(numberTrack);
-            if (track <= 10) {
+            if (  track <= 10 && track > -1) {
                 System.out.println("  your choice track number " + track);
             } else {
                 throw new IllegalStateExceptionTrack(track);
@@ -26,7 +26,7 @@ public class Audioplayer {
         } catch (NumberFormatException ex) {
             System.out.printf(" Error: - this track is not in album! ");
         } catch (IllegalStateExceptionTrack e) {
-            System.out.printf(" Error: - this track is not in album " + e.getTrackValue() + " track should be 1 to 9 ");
+            System.out.printf(" Error: - this track is not in album " + e.getTrackValue() + " track should be 0 to 9 ");
         }
 
 
