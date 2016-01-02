@@ -1,10 +1,10 @@
-package dz51;
+package Homework2016;
 
 /**
  * Created by Виктор on 02.01.2016.
  */
 public class ArrayCompareNumber {
-    public static void main(String[] args) {
+    public  void arrayCompare (String[] args) {
 
         int[] Array_mn = {10, 5, 3, 2, 6, 20, 7, 4};
         int ArrayMaximum = Array_mn[0];
