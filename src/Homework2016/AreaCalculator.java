@@ -1,7 +1,5 @@
 package Homework2016;
 
-import static java.lang.Math.PI;
-
 /**
  * Created by Виктор on 02.01.2016.
  */
@@ -16,7 +14,7 @@ public class AreaCalculator {
 
     public double ArreaCalculatorCircle(double radius){
 
-        return radius * radius * PI;
+        return (Math.pow(radius, 2) * Math.PI);
     }
 
 }
