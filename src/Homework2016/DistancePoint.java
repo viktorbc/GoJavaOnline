@@ -1,4 +1,4 @@
-package Homework4;
+package Homework2016;
 
 /**
  * Created by Виктор on 02.01.2016.
