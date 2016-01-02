@@ -9,15 +9,14 @@ public class Bubblesort {
         int nums[] = {55, 17, 100, 8, 37,
                 28, 320, 87, 65, 22};
         int a, b, t;
-        int size = 10;
         System.out.print("List of number array is: ");
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i < nums.length - 1; i++)
             System.out.print(" " + nums[i]);
         System.out.println();
 
 
-        for(a = 1; a < size; a++)
-            for(b = size - 1; b >= a; b--) {
+        for(a = 1; a < nums.length - 1; a++)
+            for(b = nums.length - 1; b >= a; b--) {
                 if(nums[b - 1] > nums[b]) {
                     t = nums[b - 1];
                     nums[b - 1] = nums[b];
@@ -27,7 +26,7 @@ public class Bubblesort {
 
 
         System.out.print("Sorted list of number array is: ");
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i < nums.length - 1; i++)
             System.out.print(" " + nums[i]);
             System.out.println();
     }
