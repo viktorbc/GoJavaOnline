@@ -9,7 +9,7 @@ public class FarhengeitToCelsium {
             return (ft-32)*5/9;
         }
 
-    public class CelsiumToFarhengeit {
+
         public double celsiumToFarhengeit (double cm){
             return (cm * 5 / 9) + 32;
         }
