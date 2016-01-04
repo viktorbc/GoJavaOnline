@@ -4,16 +4,17 @@ package Homework2016;
  * Created by Виктор on 02.01.2016.
  */
 public class BubleSorting {
-    public void bubbleSort(int nums[], int temp) {
+    public void bubbleSort(int arr[]) {
 
-        for (int a = 1; a < nums.length - 1; a++)
-            for (int b = nums.length - 1; b >= a; b--) {
-                if (nums[b - 1] > nums[b]) {
-                    temp = nums[b - 1];
-                    nums[b - 1] = nums[b];
-                    nums[b] = temp;
+        for(int i = arr.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
                 }
             }
+        }
     }
 }
 
