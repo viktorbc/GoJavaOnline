@@ -5,34 +5,19 @@ package Homework2016;
  */
 public class ArrayCompareNumber {
     public void arrayCompareNumberMax(int arr[]) {
-        int maxNumber = 0;
+        int maxNumber = arr[0], minNumber = arr[0];
         for (int i = 0; i < arr.length - 1 ; i++) {
-            if (arr[i + 1] < arr[i]) {
-                arr[i] = arr[i + 1] + arr[i];
-                arr[i + 1] = arr[i] - arr[i + 1];
-                arr[i] = arr[i] - arr[i + 1];
-                maxNumber = arr[i + 1];
-            }
-            else {
+            if( maxNumber < arr[i])
                 maxNumber = arr[i];
-            }
-        }
-    }
-    public void arrayCompareNumberMin(int arr[]) {
-        int minNumber = 0;
-        for (int i = 0; i < arr.length - 1 ; i++) {
-            if (arr[i] < arr[i + 1]) {
-                arr[i + 1] = arr[i + 1] + arr[i];
-                arr[i] = arr [i + 1] - arr[i];
-                arr[i + 1] = arr[i + 1] - arr[i];
-                minNumber = arr[i + 1];
-            }
-            else {
+            if ( minNumber > arr[i]) {
                 minNumber = arr[i];
             }
+            else {
+                minNumber = minNumber;
+            }
         }
-    }
 
+    }
 }
 
 
