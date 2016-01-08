@@ -18,16 +18,15 @@ public class Audioplayer {
         final String numberTrack = scanner.next();
         try {
             final int track = Integer.parseInt(numberTrack);
-            if (  track <
-                    10 && track > -1) {
+            if (  track < arrSongsAlbum.length && track > -1) {
                 System.out.println("  your choice track number " + track);
             } else {
                 throw new IllegalStateExceptionTrack(track);
             }
-        } catch (NumberFormatException ex) {
-            System.out.printf(" Error: - this track is not in album! ");
-        } catch (IllegalStateExceptionTrack e) {
-            System.out.printf( "Track № " + e.getTrackValue() + "  Error: - this track is not in album "  + " track should be 0 to 9 ");
+        }
+
+        catch (IllegalStateExceptionTrack e) {
+            System.out.printf( "Track № " + e.getTrackValue() + "  Error: - this track is not in album "  + " track should be 0 to " + arrSongsAlbum.length + " ");
         }
 
 
