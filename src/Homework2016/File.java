@@ -8,10 +8,11 @@ import java.util.Set;
  * Created by Виктор on 10.01.2016.
  */
 public abstract class File {
+
        static void processFile(String fileName) throws IOException {
 
         if (fileName.length() == 0) {
-            throw new IllegalArgumentException(
+            throw new IOException(
                     "empty filename");
 
         }
@@ -28,7 +29,7 @@ public abstract class File {
             Set<File> file = new HashSet<File>();
     }
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[])  {
 
         System.out.println(" Enter  name album ");
         final Scanner scanner = new Scanner(System.in);
