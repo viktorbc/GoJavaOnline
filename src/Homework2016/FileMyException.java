@@ -1,5 +1,4 @@
 package Homework2016;
-import dz61.IllegalStateExceptionTrack;
 
 import java.lang.*;
 import java.io.IOException;
@@ -27,6 +26,17 @@ public abstract class FileMyException {
         public class Directory {
             Set<FileMyException> fileMyExceptions = new HashSet<FileMyException>();
         }
+    public static class  IllegalStateExceptionTreck extends Exception  {
+        private int trackValue;
+        public IllegalStateExceptionTreck (final int trackValue) {
+            this.trackValue = trackValue;
+        }
+        public int getTrackValue() {
+            return trackValue;
+        }
+
+
+    }
 
         public static void main(String args[])  {
             int[] arrSongsAlbum = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -39,11 +49,11 @@ public abstract class FileMyException {
                     System.out.println("  your choice track number " + track);
                 }
                 else {
-                    throw new IllegalStateExceptionTrack(track);
+                    throw new IllegalStateExceptionTreck(track);
                 }
             }
 
-            catch (IllegalStateExceptionTrack e) {
+            catch (IllegalStateExceptionTreck e) {
                 System.out.printf( "Track № " + e.getTrackValue() + "  Error: - this track is not in album "  + " track should be 0 to " + arrSongsAlbum.length + " ");
                 System.out.println("");
             }
