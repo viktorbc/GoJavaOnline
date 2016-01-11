@@ -14,12 +14,9 @@ public abstract class File {
         if (fileName.length() == 0) {
             throw new IOException(
                     "empty filename");
-
         }
-
     }
     public class AudioFile extends File {
-
     }
     public class ImageFile extends File {
     }
@@ -30,18 +27,15 @@ public abstract class File {
     }
 
     public static void main(String args[])  {
-
         System.out.println(" Enter  name album ");
         final Scanner scanner = new Scanner(System.in);
         final String fileName = scanner.next();
-
         try {
             processFile("");
-
         }
         catch (IOException e) {
             System.out.printf( "Error: empty filename " );
-
+            System.out.println("");
         }
     }
 }
