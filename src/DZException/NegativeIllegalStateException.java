@@ -6,11 +6,11 @@ package DZException;
 public class NegativeIllegalStateException extends Exception {
     private int trackValue;
     public NegativeIllegalStateException() {
-        super("invalid number entered");
-        this.trackValue = trackValue;
+
+        this.trackValue = trackValue; //ассоциируется сам с собой
     }
 
-    public int getTrackValue() {
+    public int getTrackValue() {// метод не используется
         return trackValue;
     }
 
