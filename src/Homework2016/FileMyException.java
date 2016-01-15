@@ -10,7 +10,7 @@ import java.util.Set;
  * Created by Виктор on 11.01.2016.
  */
 public class FileMyException {
-            static void processFile(String fileName) throws IOException, IllegalStateException {
+            static void processFile(String fileName) throws IOException, IllegalStateException {//лишнее пробрасывание исключений
 
             if (fileName.length() == 0) {
                 throw new IOException(
@@ -24,8 +24,8 @@ public class FileMyException {
             final Scanner scanner = new Scanner(System.in);
             final String numberTrack = scanner.next();
             try {
-                final int track = Integer.parseInt(numberTrack);
-                if (  track < arrSongsAlbum.length && track > -1) {
+                final int track = Integer.parseInt(numberTrack);//лишний код
+                if (  track < arrSongsAlbum.length && track > -1) {//неправильно задано условие
                     System.out.println("  your choice track number " + track);
                 }
                 else {
@@ -41,7 +41,7 @@ public class FileMyException {
             System.out.println(" Enter  name album ");
             final String fileName = scanner.next();
             try {
-                processFile("");
+                processFile("");// абракадабра - плагиат со стороних источников
             }
             catch (IOException e) {
                 System.out.printf( "Error: empty filename " );
