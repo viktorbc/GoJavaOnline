@@ -12,29 +12,32 @@ import static DZException.Audiofile.openTrack;
 public class OpenAudioFile {
 
     public static void main(String args[]) throws IOException, NegativeIllegalStateException {
-        int[] arrSongsAlbum = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         System.out.println(" Enter  number track song ");
         final Scanner scanner = new Scanner(System.in);
-        final String song = scanner.next();
         final String numberTrack = scanner.next();
+        final int trackValue = Integer.parseInt(numberTrack);
+
         try {
-            final int trackValue = Integer.parseInt(numberTrack);
-         openTrack(Integer.parseInt(""));
-        }
-        catch (NegativeIllegalStateException ex) {
-            System.out.printf( "Track № " + ex.getTrackValue() + "  Error: - this track is not in album "  + " track should be 0 to " + arrSongsAlbum.length + " ");
-            System.out.println("");
+        openTrack(trackValue);
+        } catch (NegativeIllegalStateException e) {
+            e.printStackTrace();
+            System.out.println(" invalid number entered ");
         }
 
         System.out.println(" Enter  name audio file ");
-        try {
-            openSong("");
+        final String song = scanner.next();
 
-        } catch (IOException e) {
-            System.out.printf("Error: empty name file of song " + song);
-            System.out.println("");
+        try {
+            openSong("song"); // неправельный вызов метода
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+
+        System.out.printf("Error: empty name file of song " + song);
+        System.out.println("");
+
 
 
     }

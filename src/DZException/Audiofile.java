@@ -1,5 +1,7 @@
 package DZException;
 
+import DZException.NegativeIllegalStateException;
+
 import java.io.IOException;
 
 /**
@@ -7,14 +9,13 @@ import java.io.IOException;
  */
 public class Audiofile extends File {
 
-    public static void openTrack(final int trackValue) throws
-            NegativeIllegalStateException {
-        int[] arrSongsAlbum = new int[0];
+    public static void openTrack(final int trackValue)throws NegativeIllegalStateException {
 
-        if (trackValue < 0 && trackValue > arrSongsAlbum.length) throw new NegativeIllegalStateException();
+        if (trackValue < 0)
+            throw new NegativeIllegalStateException();
     }
 
-    public static void openSong(String song) throws IOException {
+    public static void openSong(String song) throws Exception {
 
         if (song.length() == 0) {
             throw new IOException(
