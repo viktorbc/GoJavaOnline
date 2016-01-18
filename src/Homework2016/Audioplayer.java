@@ -1,6 +1,4 @@
-package dz61;
-
-        import Exemples.NegativeAge;
+package Homework2016;
 
         import java.lang.*;
         import java.util.Scanner;
@@ -18,9 +16,10 @@ public class Audioplayer {
         final String numberTrack = scanner.next();
         try {
             final int track = Integer.parseInt(numberTrack);
-            if (  track < arrSongsAlbum.length && track > -1) {
+            if (  track > arrSongsAlbum.length && track < -1) {
                 System.out.println("  your choice track number " + track);
-            } else {
+            }
+            else {
                 throw new IllegalStateExceptionTrack(track);
             }
         }

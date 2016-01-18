@@ -9,6 +9,7 @@ public class ArrayCompareNumber {
            for (int i = 0; i <= arr.length - 1; i++) {
                if (maxNumber < arr[i]) {
                    maxNumber = arr[i];
+                   System.out.println(" Max number " + maxNumber + "   " + arr[i]);
                }
                if (minNumber > arr[i]) {
                    minNumber = arr[i];
@@ -22,7 +23,7 @@ public class ArrayCompareNumber {
        }
 
     public static void main(String[] args) {
-        int[] tempArray = {1, 2, 3, -10, 0, -20};
+        int[] tempArray = {1, 2, 3, -10, 0, -20, -50, 25};
         arrayCompareNumber(tempArray);
     }
 }
