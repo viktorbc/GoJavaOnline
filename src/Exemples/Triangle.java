@@ -1,7 +1,9 @@
-package dz4;
+package Exemples;
 
 
-    abstract class Triangle extends Figure {
+import dz4.Figure;
+
+abstract class Triangle extends Figure {
         private double x = 10;
         private double y = 5;
 

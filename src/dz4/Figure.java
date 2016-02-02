@@ -5,7 +5,7 @@ import java.lang.Math;
             double r;
 
             double area() {
-                return (0);
+                return 0;
             }
 
             static class Triangle extends Figure {

@@ -1,4 +1,4 @@
-package Homework2016;
+package dz4;
 
 /**
  * Created by Виктор on 02.01.2016.

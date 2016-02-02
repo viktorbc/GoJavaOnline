@@ -1,5 +1,7 @@
-package dz4;
+package Exemples;
 
+
+import dz4.Figure;
 
 abstract class Rectangle extends Figure {
     private double x;
