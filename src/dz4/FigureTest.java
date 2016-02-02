@@ -16,7 +16,7 @@ public class FigureTest {
         final double b = 4;
         final double c = 5;
         final double result = SquareFigures.getArrea(a, b, c);
-        Assert.assertEquals(6, result, 0);
+        Assert.assertEquals(6, result);
     }
 
 
